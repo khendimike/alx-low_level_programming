@@ -3,6 +3,7 @@
 /**
 *main - check the code
 *
+*print_alphabet - print alphabet
 *Return: Always 0
 */
 
@@ -11,22 +12,17 @@ int main(void)
 
 print_alphabet();
 
-return (0);
-}
-
-/**
- *print_alphabet - prints lowercase alphabet
- */
+char ch = 'a';
 
 void print_alphabet(void)
 {
-char ch = 'a';
-
 while (ch <= 'z')
 {
 _putchar(ch);
 ch++;
 }
-
-_putchar('\n');
 }
+return (0);
+}
+
+
