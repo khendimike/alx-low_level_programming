@@ -1,2 +1,2 @@
 extern int _putchar(char str);
-void print_alphabet(void);
+extern void print_alphabet(void);
