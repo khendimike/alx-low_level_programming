@@ -1,11 +1,10 @@
 #include "main.h"
 
 /**
-*_isalpha - checks for alphabet
+*_isalpha - checks for alphabets
 *
-*@c: requires alphabet
-*
-*Return: returns 1 or 0
+*@c: holds an alphabet
+*Return: return 1 or 0
 */
 
 int _isalpha(int c)
@@ -18,5 +17,4 @@ else
 {
 return (0);
 }
-
-
+}
