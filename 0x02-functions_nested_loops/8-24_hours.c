@@ -28,8 +28,12 @@ _putchar(':');
 _putchar(y + '0');
 _putchar(z + '0');
 _putchar('\n');
+z++;
 }
+y++;
 }
+x++;
 }
+i++;
 }
 }
