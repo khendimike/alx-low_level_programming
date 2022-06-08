@@ -18,7 +18,7 @@ while (y <= 5)
 {
 while (z <= 9)
 {
-if (i == 2 && j > 3)
+if (i == 2 && x > 3)
 {
 break;
 }
