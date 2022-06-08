@@ -7,10 +7,8 @@
  */
 void times_table(void)
 {
-int res, step, init, last_value, k;
-
-k = 0;
-step = 0;
+int res, init, last_value;
+int k, step = 0;
 last_value = 9;
 do {
 for (init = 0; init <= last_value; init++)
