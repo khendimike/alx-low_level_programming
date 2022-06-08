@@ -14,6 +14,6 @@ if (ldigit < 0)
 {
 ldigit *= -1;
 }
-_putchar(ldigt + '0');
+_putchar(ldigit + '0');
 return (ldigit);
 }
