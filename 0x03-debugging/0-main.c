@@ -1,19 +1,23 @@
 #include "main.h"
 
 /**
-*main - tests function that print if integer is positive or negative
+*positive_or_negative - tests positive or negative
 *
-*Return: 0
+*@n: holds the number
 */
-
-int main(void)
+void positive_or_negative(int n)
 {
-int i;
+if (n > 0)
+{
 
-i = 0;
-
-positive_or_negative(i);
-
-return (0);
-
+printf("%d is positive", n);
+}
+else if (n < 0)
+{
+printf("%d is negative", n);
+}
+else
+{
+printf("%d is zero", n);
+}
 }
