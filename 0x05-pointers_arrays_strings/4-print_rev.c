@@ -7,15 +7,19 @@
 
 void print_rev(char *s)
 {
-int p, k;
+int count = 0;
 
-while (*(s + p) != 0)
+while (*s != '\0')
 {
-p++;
+s++;
+count++;
 }
-for (k = p - 1; k >= 0; k--)
+
+while (count > 0)
 {
-_putchar(s[k]);
+s--;
+_putchar(*s);
+count--;
 }
 _putchar('\n');
 }
