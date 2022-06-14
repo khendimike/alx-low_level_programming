@@ -7,26 +7,27 @@
 
 void puts_half(char *str)
 {
-int p, k;
+int len, n, i;
 
-/*First determine the size of the string*/
-while (*(str + p) != 0)
-{
-p++;
-}
-if ((p) % 2 == 0)
-{
+len = 0;
 
-for (k = p / 2; k < p; k++)
+while (str[len] != '\0')
 {
-_putchar(str[k]);
+len++;
+}
+
+if (len % 2 == 0)
+{
+for (i = len / 2; str[i] != '\0'; i++)
+{
+_putchar(str[i]);
 }
 }
-else
+else if (len % 2)
 {
-for (k = ((p - 1) / 2) + 1; k < p; k++)
+for (n = (len - 1) / 2; n < len - 1; n++)
 {
-_putchar(str[k]);
+_putchar(str[n + 1]);
 }
 }
 _putchar('\n');
