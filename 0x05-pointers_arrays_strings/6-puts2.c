@@ -5,24 +5,20 @@
  *
  * Return: void
  */
+
 void puts2(char *str)
 {
-int i, len, start;
+int i, j = 0;
 
-len = 0;
-
-for (i = 0; str[i] != '\0'; ++i)
+while (str[i] != '\0')
 {
-len = i;
-}
-for (start = 0; start <= len; start++)
-{
-if (start % 2 == 0)
-_putchar(str[start]);
-
-else
-continue;
+i++;
 }
 
+while (j < i)
+{
+_putchar(str[j]);
+j = j + 2;
+}
 _putchar('\n');
 }
