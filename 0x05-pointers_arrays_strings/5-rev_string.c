@@ -7,23 +7,22 @@
 
 void rev_string(char *s)
 {
-int p = 0, k, j = 0, m = 0;
-char c[1000];
+char *t = s;
+char n[1000];
+short c = 0;
 
+while (*s != '\0')
+{
+n[c] = *s;
+s++;
+c++;
+}
+c = 0;
 
-/*First determine the size of the string*/
-while (*(s + p) != 0)
+while (s > t)
 {
-p++;
-}
-for (k = 0; k <= p - 1; k++)
-{
-*(c + j) = *(s + k);
-j++;
-}
-for (k = p - 1; k >= 0; k--)
-{
-*(s + m) = *(c + k);
-m++;
+s--;
+*s = n[c];
+c++;
 }
 }
