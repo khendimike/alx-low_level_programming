@@ -1,0 +1,4 @@
+#include "man.h"
+
+/**
+ * print_chessboard - print
