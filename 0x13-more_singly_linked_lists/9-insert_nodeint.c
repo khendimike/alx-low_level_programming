@@ -1,50 +1,40 @@
 #include "lists.h"
+#include <stdlib.h>
+
 /**
- *insert_nodeint_at_index-Inserts a node at specified index.
- *@head:Pointer to a pointer that points to the head node.
- *@idx:Index where to add the new node.
- *@n:Element n of the new node.
- *Return:Pointer to the newly added node.
- */
+ * insert_nodeint_at_index - Insert a new node at a given positiion.
+ * @head: First node address.
+ * @idx: Position of the new node to be inserted in.
+ * @n: Data of the new node.
+ * Return: Address of the new node.
+ **/
+
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *temp = malloc(sizeof(listint_t));
-	listint_t *navigate = *head;
+	listint_t *new_node, *temp;
 	unsigned int i = 0;
 
-	temp->n = n;
-	temp->next = NULL;
-
-	if (temp == NULL && idx > 0)
+	if (*head == NULL && idx != 0)
+		return (NULL);
+	if (idx != 0)
 	{
-		free(temp);
+	temp = *head;
+	for (; i < idx - 1 && temp != NULL; i++)
+		temp = temp->next;
+	if (temp == NULL)
 		return (NULL);
 	}
-/*check if adding to the head node.*/
+	new_node = malloc(sizeof(listint_t));
+	if (new_node == NULL)
+		return (NULL);
+	new_node->n = n;
 	if (idx == 0)
 	{
-		temp->next = *head;
-		*head = temp;
-		return (temp);
+		new_node->next = *head;
+		*head = new_node;
+		return (new_node);
 	}
-
-	for (i = 0; i < (idx - 1); i++)
-	{
-		if (navigate != NULL)
-		{
-		navigate = navigate->next;
-		}
-	}
-	if (navigate == NULL)
-	{
-		free(navigate);
-		return (NULL);
-	}
-	else
-	{
-		temp->next = navigate->next;
-		navigate->next = temp;
-		return (temp);
-	}
+	new_node->next = temp->next;
+	temp->next = new_node;
+	return (new_node);
 }
-
